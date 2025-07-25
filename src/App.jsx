@@ -1,6 +1,6 @@
-import { useState } from "react";
-//import reactLogo from "./assets/react.svg";
-//import viteLogo from "/vite.svg";
+import { useState, createContext } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import Register from "./components/Register";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
@@ -15,7 +15,7 @@ import Login from "./components/Login";
 import Products from "./components/Products";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
-import AppContext from "./AppContext";
+export const AppContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState({});
